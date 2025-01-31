@@ -1,0 +1,99 @@
+/* LandingPage.css */
+.landing-page {
+    background-color: #71cbff;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  
+  /* Circular Carousel */
+  .circular-carousel {
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .carousel-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+  }
+  
+  .carousel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Carousel Indicators */
+  .carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 4px;
+    padding: 0;
+  }
+  
+  .carousel-indicator.active {
+    background-color: white;
+  }
+  
+ /* Add Palm Tree Container */
+.palm-container {
+    position: absolute;
+    bottom: 40px;    /* Space from bottom */
+    left: 40px;      /* Space from left */
+    width: 300px;    /* Larger size */
+    height: auto;
+    z-index: 1;      /* Keep behind content */
+}
+
+.palm-container img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;    /* Slight transparency */
+}
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    margin-top: 2rem;
+  }
+  
+  .chevron {
+    width: 32px;
+    height: 32px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    margin: -16px auto 0;
+    animation: scroll-bounce 2s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes scroll-bounce {
+    0%, 100% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+    50% {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+  }
+  
+  /* Navbar customization */
+  .navbar-nav .nav-link {
+    color: white !important;
+    margin: 0 1rem;
+    transition: opacity 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    opacity: 0.8;
+  }

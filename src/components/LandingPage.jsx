@@ -1,17 +1,20 @@
+// LandingPage.jsx
 import React, { useState, useEffect } from 'react';
 import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './LandingPage.css';  // For custom styles
+import palmGif from '../assets/palm.gif';  // Import palm tree GIF
 
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Sample images array - replace with your actual images
   const images = [
     "/api/placeholder/400/400",
     "/api/placeholder/400/400",
     "/api/placeholder/400/400"
   ];
 
-  // Carousel automation
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -20,83 +23,99 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-sky-300">
-      {/* Navigation Bar */}
-      <nav className="p-4">
-        <ul className="flex justify-end space-x-8 text-white">
-          <li className="cursor-pointer hover:text-sky-100">HOME</li>
-          <li className="cursor-pointer hover:text-sky-100">PROJECTS</li>
-          <li className="cursor-pointer hover:text-sky-100">RESUME</li>
-          <li className="cursor-pointer hover:text-sky-100">CONTACT</li>
-        </ul>
+    <div className="landing-page min-vh-100">
+      {/* Navigation */}
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <div className="container-fluid justify-content-end">
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">HOME</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/projects">PROJECTS</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/resume">RESUME</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">CONTACT</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 pt-8">
-        <h1 className="text-white text-4xl font-bold mb-12">Welcome</h1>
+      <div className="container mt-4">
+        <h1 className="text-white display-4 mb-5">Welcome</h1>
         
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Left side with carousel */}
-          <div className="relative">
-            {/* Island and Palm Tree */}
-            <div className="absolute bottom-0 left-0 z-0">
-              <div className="relative">
-                <div className="w-32 h-16 bg-yellow-200 rounded-full absolute bottom-0"></div>
-                <div className="w-8 h-24 bg-green-800 absolute bottom-16 left-8"></div>
-                <div className="w-16 h-12 bg-green-600 rounded-full absolute bottom-32 left-4"></div>
-              </div>
-            </div>
-            
-            {/* Circular Image Carousel */}
-            <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white relative z-10">
-              <div className="w-full h-full relative">
+        <div className="row align-items-center">
+          {/* Left Column with Carousel */}
+          <div className="col-md-6 position-relative">
+            {/* Image Carousel */}
+            <div className="circular-carousel">
+              <div className="carousel-image-container">
                 <img
                   src={images[currentImageIndex]}
                   alt="Profile"
-                  className="w-full h-full object-cover"
+                  className="img-fluid"
                 />
               </div>
             </div>
             
             {/* Carousel Indicators */}
-            <div className="flex justify-center mt-4 gap-2">
+            <div className="carousel-indicators d-flex justify-content-center mt-3">
               {images.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full ${
-                    currentImageIndex === index ? 'bg-white' : 'bg-white/50'
-                  }`}
+                  className={`carousel-indicator ${currentImageIndex === index ? 'active' : ''}`}
                   onClick={() => setCurrentImageIndex(index)}
                 />
               ))}
             </div>
           </div>
 
-          {/* Right side content */}
-          <div className="text-white text-center md:text-left">
-            <h2 className="text-5xl font-bold mb-4">Andry<br />Rakotonabelo</h2>
-            <h3 className="text-2xl mb-2">Junior Software Engineer</h3>
-            <p className="text-xl mb-4">Computer Science & Data Science<br />at Gettysburg College</p>
+          {/* Right Column Content */}
+          <div className="col-md-6 text-white text-center text-md-start">
+            <h2 className="display-3 fw-bold mb-3">
+              Andry<br />Rakotonabelo
+            </h2>
+            <h3 className="h2 mb-2">Junior Software Engineer</h3>
+            <p className="h4 mb-4">
+              Computer Science & Data Science<br />
+              at Gettysburg College
+            </p>
             
             {/* Location Information */}
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-center md:justify-start gap-2">
-                <MapPin className="w-5 h-5" />
+            <div className="d-flex flex-column gap-2">
+              <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+                <MapPin className="me-2" />
                 <span>Gettysburg, PA, USA</span>
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-2">
-                <MapPin className="w-5 h-5" />
+              <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+                <MapPin className="me-2" />
                 <span>Antananarivo, Madagascar</span>
               </div>
             </div>
           </div>
         </div>
-
+        <div className="palm-container">
+          <img src={palmGif} alt="Palm Tree GIF" />
+        </div>
         {/* Scroll Indicator */}
-        <div className="flex justify-center mt-16">
-          <div className="animate-bounce">
-            <div className="w-8 h-8 border-b-2 border-r-2 border-white rotate-45"></div>
-            <div className="w-8 h-8 border-b-2 border-r-2 border-white rotate-45 -mt-4"></div>
+        <div className="text-center mt-5">
+          <div className="scroll-indicator">
+            <div className="chevron"></div>
+            <div className="chevron"></div>
           </div>
         </div>
       </div>
