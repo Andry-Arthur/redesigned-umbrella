@@ -97,3 +97,13 @@
   .navbar-nav .nav-link:hover {
     opacity: 0.8;
   }
+  
+  @font-face {
+    font-family: 'Ample Display';
+    src: url('../assets/fonts/AmpleDisplay.woff2') format('woff2'),
+         url('../assets/fonts/AmpleDisplay.woff') format('woff');
+  }
+  
+  .ample-font {
+    font-family: 'Ample Display', serif;
+  }

@@ -1,6 +1,6 @@
 // LandingPage.jsx
 import React, { useState, useEffect } from 'react';
-import { MapPin } from 'lucide-react';
+import { MapPin, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LandingPage.css';  // For custom styles
@@ -56,7 +56,7 @@ const LandingPage = () => {
 
       {/* Main Content */}
       <div className="container mt-4">
-        <h1 className="text-white display-4 mb-5">Welcome</h1>
+      <h1 className="text-white display-3 fw-bold mb-5 ample-font">Welcome</h1>
         
         <div className="row align-items-center">
           {/* Left Column with Carousel */}
@@ -73,45 +73,45 @@ const LandingPage = () => {
             </div>
             
             {/* Carousel Indicators */}
-            <div className="carousel-indicators d-flex justify-content-center mt-3">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  className={`carousel-indicator ${currentImageIndex === index ? 'active' : ''}`}
-                  onClick={() => setCurrentImageIndex(index)}
-                />
-              ))}
-            </div>
-          </div>
+                  <div className="carousel-indicators d-flex justify-content-center mt-3">
+                    {images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`carousel-indicator ${currentImageIndex === index ? 'active' : ''}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                    />
+                    ))}
+                  </div>
+                  </div>
 
-          {/* Right Column Content */}
-          <div className="col-md-6 text-white text-center text-md-start">
-            <h2 className="display-3 fw-bold mb-3">
-              Andry<br />Rakotonabelo
-            </h2>
-            <h3 className="h2 mb-2">Junior Software Engineer</h3>
-            <p className="h4 mb-4">
-              Computer Science & Data Science<br />
-              at Gettysburg College
-            </p>
-            
-            {/* Location Information */}
-            <div className="d-flex flex-column gap-2">
-              <div className="d-flex align-items-center justify-content-center justify-content-md-start">
-                <MapPin className="me-2" />
-                <span>Gettysburg, PA, USA</span>
-              </div>
-              <div className="d-flex align-items-center justify-content-center justify-content-md-start">
-                <MapPin className="me-2" />
-                <span>Antananarivo, Madagascar</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="palm-container">
-          <img src={palmGif} alt="Palm Tree GIF" />
-        </div>
-        {/* Scroll Indicator */}
+                  {/* Right Column Content */}
+                  <div className="col-md-6 text-white text-end text-md-end">
+                  <h2 className="display-3 fw-bold mb-3 ample-font">
+                    Andry<br />Rakotonabelo
+                  </h2>
+                  <h3 className="h2 mb-2">Junior Software Engineer</h3>
+                  <p className="h4 mb-4">
+                    Computer Science & Data Science<br />
+                    at Gettysburg College
+                  </p>
+                  
+                  {/* Location Information */}
+                  <div className="d-flex flex-column gap-2 align-items-end">
+                    <div className="d-flex align-items-center justify-content-end">
+                    <MapPin className="me-2" />
+                    <span>Gettysburg, PA, USA</span>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-end">
+                    <Globe className="me-2" />
+                    <span>Antananarivo, Madagascar</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div className="palm-container">
+                  <img src={palmGif} alt="Palm Tree GIF" />
+                </div>
+                {/* Scroll Indicator */}
         <div className="text-center mt-5">
           <div className="scroll-indicator">
             <div className="chevron"></div>
