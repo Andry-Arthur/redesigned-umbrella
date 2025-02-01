@@ -883,3 +883,9 @@ button:focus, button:focus-visible {
   syntax: "*";
   inherits: false;
 }
+
+.chela-one-regular {
+  font-family: "Chela One", serif;
+  font-weight: 400;
+  font-style: normal;
+}

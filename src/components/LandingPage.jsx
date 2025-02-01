@@ -56,62 +56,67 @@ const LandingPage = () => {
 
       {/* Main Content */}
       <div className="container mt-4">
-      <h1 className="text-white display-3 fw-bold mb-5 ample-font">Welcome</h1>
+      <h1 className="text-white display-3 fw-bold mb-5 chela-one-regular">Welcome</h1>
         
         <div className="row align-items-center">
           {/* Left Column with Carousel */}
           <div className="col-md-6 position-relative">
-            {/* Image Carousel */}
-            <div className="circular-carousel">
-              <div className="carousel-image-container">
-                <img
-                  src={images[currentImageIndex]}
-                  alt="Profile"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-            
-            {/* Carousel Indicators */}
-                  <div className="carousel-indicators d-flex justify-content-center mt-3">
-                    {images.map((_, index) => (
+            <div className="d-flex flex-column align-items-center">
+              {/* Carousel Wrapper */}
+              <div className="carousel-wrapper">
+                {/* Image Carousel */}
+                <div className="circular-carousel">
+                  <div className="carousel-image-container">
+                    <img
+                      src={images[currentImageIndex]}
+                      alt="Profile"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+                
+                {/* Carousel Indicators */}
+                <div className="carousel-indicators d-flex justify-content-center mt-3">
+                  {images.map((_, index) => (
                     <button
                       key={index}
                       className={`carousel-indicator ${currentImageIndex === index ? 'active' : ''}`}
                       onClick={() => setCurrentImageIndex(index)}
                     />
-                    ))}
-                  </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  {/* Right Column Content */}
-                  <div className="col-md-6 text-white text-end text-md-end">
-                  <h2 className="display-3 fw-bold mb-3 ample-font">
-                    Andry<br />Rakotonabelo
-                  </h2>
-                  <h3 className="h2 mb-2">Junior Software Engineer</h3>
-                  <p className="h4 mb-4">
-                    Computer Science & Data Science<br />
-                    at Gettysburg College
-                  </p>
-                  
-                  {/* Location Information */}
-                  <div className="d-flex flex-column gap-2 align-items-end">
-                    <div className="d-flex align-items-center justify-content-end">
-                    <MapPin className="me-2" />
-                    <span>Gettysburg, PA, USA</span>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-end">
-                    <Globe className="me-2" />
-                    <span>Antananarivo, Madagascar</span>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                <div className="palm-container">
-                  <img src={palmGif} alt="Palm Tree GIF" />
-                </div>
-                {/* Scroll Indicator */}
+          {/* Right Column Content */}
+                <div className="col-md-6 text-white text-end text-md-end">
+                <h2 className="display-2 fw-bold mb-3 chela-one-regular">
+                  Andry A.<br />Rakotonjanabelo
+                </h2>
+                <h3 className="h1 mb-2">Junior Software Engineer</h3>
+                <p className="h3 mb-4">
+                  Computer Science & Data Science<br />
+                  at Gettysburg College
+                </p>
+                
+                {/* Location Information */}
+            <div className="d-flex flex-column gap-2 align-items-end">
+              <div className="d-flex align-items-center justify-content-end">
+                <MapPin className="me-2" />
+                <span>Gettysburg, PA, USA</span>
+              </div>
+              <div className="d-flex align-items-center justify-content-end">
+                <Globe className="me-2" />
+                <span>Antananarivo, Madagascar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="palm-container">
+          <img src={palmGif} alt="Palm Tree GIF" />
+        </div>
+        {/* Scroll Indicator */}
         <div className="text-center mt-5">
           <div className="scroll-indicator">
             <div className="chevron"></div>

@@ -5,13 +5,25 @@
     overflow-x: hidden;
   }
   
+  /* Add Carousel Wrapper styles */
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
   /* Circular Carousel */
   .circular-carousel {
-    width: 256px;
-    height: 256px;
-    margin: 0 auto;
+    width: 400px;  
+    height: 400px; 
+    margin: 2rem auto; /* Remove margin-left: 45% */
     position: relative;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .carousel-image-container {
@@ -96,12 +108,6 @@
   
   .navbar-nav .nav-link:hover {
     opacity: 0.8;
-  }
-  
-  @font-face {
-    font-family: 'Ample Display';
-    src: url('../assets/fonts/AmpleDisplay.woff2') format('woff2'),
-         url('../assets/fonts/AmpleDisplay.woff') format('woff');
   }
   
   .ample-font {
