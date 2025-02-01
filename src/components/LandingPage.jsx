@@ -5,20 +5,27 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LandingPage.css';  // For custom styles
 import palmGif from '../assets/palm.gif';  // Import palm tree GIF
+import andry1 from '../assets/Andry1.jpg';  // Import profile image
+import andry2 from '../assets/Andry2.jpg';  // Import profile image
 
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+  const [fade, setFade] = useState(false);
+
   const images = [
-    "/api/placeholder/400/400",
-    "/api/placeholder/400/400",
+    andry1,
+    andry2,
     "/api/placeholder/400/400"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+      setFade(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+        setFade(false);
+      }, 500); // Duration of the fade-out animation
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -38,7 +45,7 @@ const LandingPage = () => {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">HOME</Link>
+                <Link className="nav-link" to="/redesigned-umbrella">HOME</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/projects">PROJECTS</Link>
@@ -65,7 +72,7 @@ const LandingPage = () => {
               {/* Carousel Wrapper */}
               <div className="carousel-wrapper">
                 {/* Image Carousel */}
-                <div className="circular-carousel">
+                <div className={`circular-carousel ${fade ? 'fade-out' : 'fade-in'}`}>
                   <div className="carousel-image-container">
                     <img
                       src={images[currentImageIndex]}
