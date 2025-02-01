@@ -60,7 +60,7 @@
     position: absolute;
     bottom: 40px;    /* Space from bottom */
     left: 40px;      /* Space from left */
-    width: 30%;    /* Larger size */
+    width: 20%;    /* Larger size */
     height: auto;
     z-index: 0;      /* Keep behind content */
 }
@@ -101,16 +101,7 @@
     }
   }
   
-  /* Navbar customization */
-  .navbar-nav .nav-link {
-    color: white !important;
-    margin: 0 1rem;
-    transition: opacity 0.3s;
-  }
   
-  .navbar-nav .nav-link:hover {
-    opacity: 0.8;
-  }
   
   .ample-font {
     font-family: 'Ample Display', serif;

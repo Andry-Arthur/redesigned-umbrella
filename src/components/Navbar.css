@@ -1,0 +1,28 @@
+/* Navbar customization */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important;
+    margin: 0 1rem;
+    transition: opacity 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar {
+      background-color: transparent;
+    }
+  
+    .navbar.show-background {
+      background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background when expanded */
+    }
+  }
