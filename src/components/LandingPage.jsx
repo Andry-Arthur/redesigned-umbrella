@@ -30,8 +30,10 @@ const LandingPage = () => {
   }, []);
 
   const handleProjectsClick = () => {
-    // Scroll animation or direct navigation
-    window.location.href = "/redesigned-umbrella#projects";
+      const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
