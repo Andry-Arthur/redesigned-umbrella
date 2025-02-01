@@ -60,15 +60,17 @@
     position: absolute;
     bottom: 40px;    /* Space from bottom */
     left: 40px;      /* Space from left */
-    width: 300px;    /* Larger size */
+    width: 30%;    /* Larger size */
     height: auto;
-    z-index: 1;      /* Keep behind content */
+    z-index: 0;      /* Keep behind content */
 }
 
 .palm-container img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     opacity: 0.8;    /* Slight transparency */
+    z-index: 0;
 }
   
   /* Scroll Indicator */
@@ -151,7 +153,7 @@
     width: 64px;
     height: 64px;
   }
-  
+
   .chevron-btn:hover {
     transform: translateY(5px);
   }
@@ -161,4 +163,51 @@
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(10px); }
     60% { transform: translateY(5px); }
+  }
+
+  @media (max-width: 576px) {
+    .circular-carousel {
+      width: 300px;
+      height: 300px;
+    }
+    .chevron-btn svg {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .palm-container img {
+      width: 100%;
+      height: auto;
+      opacity: 0.8;    /* Slight transparency */
+      z-index: 0;
+    }
+
+    .display-3 {
+      z-index: 2;
+      font-size: 2rem;
+      margin-bottom: 1rem; /* Reduce bottom margin */
+    }
+    .display-2 {
+      z-index: 2;
+      font-size: 1.5rem;
+    }
+    .h1 {
+      z-index: 2;
+      font-size: 1.25rem;
+    }
+    .h3 {
+      z-index: 2;
+      font-size: 1rem;
+    }
+    .container.mt-4 {
+      margin-top: 1rem; /* Reduce top margin */
+    }
+
+    .mb-5 {
+      margin-bottom: 1rem !important; /* Reduce bottom margin */
+    }
+    
+    .project-title {
+      margin-bottom: 1em !important;
+    }
   }

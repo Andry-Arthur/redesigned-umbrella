@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { MapPin, Globe, ChevronsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import './LandingPage.css';  // For custom styles
 import palmGif from '../assets/palm.gif';  // Import palm tree GIF
 import andry1 from '../assets/Andry1.jpg';  // Import profile image
