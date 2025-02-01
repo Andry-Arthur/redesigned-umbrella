@@ -1,6 +1,6 @@
 // LandingPage.jsx
 import React, { useState, useEffect } from 'react';
-import { MapPin, Globe } from 'lucide-react';
+import { MapPin, Globe, ChevronsDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LandingPage.css';  // For custom styles
@@ -28,6 +28,11 @@ const LandingPage = () => {
     }, 8000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleProjectsClick = () => {
+    // Scroll animation or direct navigation
+    window.location.href = "/redesigned-umbrella#projects";
+  };
 
   return (
     <div className="landing-page min-vh-100">
@@ -123,12 +128,15 @@ const LandingPage = () => {
         <div className="palm-container">
           <img src={palmGif} alt="Palm Tree GIF" />
         </div>
-        {/* Scroll Indicator */}
-        <div className="text-center mt-5">
-          <div className="scroll-indicator">
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-          </div>
+        {/* Add Chevron at the end of the Landing Page section */}
+        <div className="text-center mt-4">
+          <button
+            className="chevron-btn btn btn-link"
+            onClick={handleProjectsClick}
+            style={{ fontSize: '2rem', textDecoration: 'none' }}
+          >
+            <ChevronsDown color="white" size={48} />
+          </button>
         </div>
       </div>
     </div>
