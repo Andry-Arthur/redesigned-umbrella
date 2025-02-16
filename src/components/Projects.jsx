@@ -25,13 +25,10 @@ import { SiGooglecalendar as GCal} from "react-icons/si";
 import { TiWeatherPartlySunny as WeatherAPI} from "react-icons/ti";
 import { AiOutlineOpenAI as OpenAI} from "react-icons/ai";
 
-
-
-
-
-
 const Projects = () => {
-  // Include the Yosemite project within your projects list data
+  
+  ReactLogo.displayName = "FaReact";
+
   const projects = [
     {
       title: "Codecafé",
