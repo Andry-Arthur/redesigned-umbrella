@@ -20,6 +20,21 @@ export default function OverflowCard({
 }) {
     const nameOverrides = {
         GrMysql: 'MySQL',
+        AiOutlineDotNet: 'ASP.NET',
+        TbBrandCSharp: 'C#',
+        FaJs: 'JavaScript',
+        DiJqueryLogo: 'jQuery',
+        FaReact: 'React',
+        SiTypescript: 'TypeScript',
+        SiSpringboot: 'Spring Boot',
+        SiSpring: 'Spring',
+        FaBootstrap: 'Bootstrap',
+        SiGooglegemini: 'Google Gemini API',
+        SiFastapi: 'FastAPI',
+        FaRaspberryPi: 'Raspberry Pi',
+        SiGooglecalendar: 'Google Calendar API',
+        TiWeatherPartlySunny: 'OpenWeather API',
+        AiOutlineOpenAI: 'OpenAI API',
     };
 
     return (
