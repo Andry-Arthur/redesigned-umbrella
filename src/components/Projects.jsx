@@ -5,6 +5,7 @@ import OverflowCard from './OverflowCard';
 import { GrMysql } from "react-icons/gr";
 import ClimatelyLogo from '../assets/climatelyLogoCopy.png';
 import Dermafyr from '../assets/Dermafyr.png';
+import Kaleedo from '../assets/Kaleedo.png';
 
 const Projects = () => {
   // Include the Yosemite project within your projects list data
@@ -18,6 +19,13 @@ const Projects = () => {
       mainImageAlt: "Scenic view",
       icons: [GrMysql],
       link: "#"  // default link (or update with an actual URL)
+    },
+    {
+      title: "Kaleedo | Senior CS Capstone",
+      description: "A contructivist digital humanties platform designed leveraging AI and NLP.",
+      image: Kaleedo, // Replace with your actual image path
+      icons: [], // Add icons if needed
+      link: "#"
     },
     {
       title: "Dermafyr",
