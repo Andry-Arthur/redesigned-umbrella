@@ -18,31 +18,8 @@ export default function OverflowCard({
     icons = [],
     link = '#'  // Default link to the same page
 }) {
-    const nameOverrides = {
-        GrMysql: 'MySQL',
-        AiOutlineDotNet: 'ASP.NET',
-        TbBrandCSharp: 'C#',
-        FaJs: 'JavaScript',
-        DiJqueryLogo: 'jQuery',
-        FaReact: 'React',
-        SiTypescript: 'TypeScript',
-        SiSpringboot: 'Spring Boot',
-        SiSpring: 'Spring',
-        FaBootstrap: 'Bootstrap',
-        SiGooglegemini: 'Google Gemini API',
-        SiFastapi: 'FastAPI',
-        FaRaspberryPi: 'Raspberry Pi',
-        SiGooglecalendar: 'Google Calendar API',
-        TiWeatherPartlySunny: 'OpenWeather API',
-        AiOutlineOpenAI: 'OpenAI API',
-    };
-
     return (
-        <Box
-            component="a"
-            href={link}
-            sx={{ width: { xs: 300, sm: 400 } }}
-        >
+        <Box component="a" href={link} sx={{ width: { xs: 300, sm: 400 } }}>
             <Card variant="outlined" sx={{ width: { xs: 300, sm: 400 } }}>
                 <CardOverflow>
                     <AspectRatio ratio="2">
@@ -62,9 +39,8 @@ export default function OverflowCard({
                     <Divider inset="context" />
                     <CardContent orientation="horizontal">
                         {icons.map((IconComponent, index) => {
-                            const defaultName =
-                                IconComponent.displayName || IconComponent.name || 'icon';
-                            const tooltipText = nameOverrides[defaultName] || defaultName;
+                            const tooltipText =
+                              IconComponent.displayName || 'icon';
                             return (
                                 <Tooltip key={index} title={tooltipText} placement="top">
                                     <Box

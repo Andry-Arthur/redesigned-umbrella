@@ -7,63 +7,80 @@ import Dermafyr from '../assets/Dermafyr.png';
 import Kaleedo from '../assets/Kaleedo.png';
 import Codecafe from '../assets/CodeCafe.png';
 
-import { GrMysql as MySQL} from "react-icons/gr";
+import { GrMysql as MySQL } from "react-icons/gr";
 import { AiOutlineDotNet as DotNet } from "react-icons/ai";
-import { TbBrandCSharp as CSharp} from "react-icons/tb";
-import { FaJs as JS} from "react-icons/fa";
-import { DiJqueryLogo as JQuery} from "react-icons/di";
-import { FaReact as ReactLogo} from "react-icons/fa";
+import { TbBrandCSharp as CSharp } from "react-icons/tb";
+import { FaJs as JS } from "react-icons/fa";
+import { DiJqueryLogo as JQuery } from "react-icons/di";
+import { FaReact as ReactLogo } from "react-icons/fa";
 import { SiTypescript as Typescript } from "react-icons/si";
-import { SiSpringboot as SpringBoot} from "react-icons/si";
-import { SiSpring as Spring} from "react-icons/si";
-import { FaBootstrap as Bootstrap} from "react-icons/fa";
-import { SiGooglegemini as GoogleGemini} from "react-icons/si";
-import { SiTensorflow as TF} from "react-icons/si";
-import { SiFastapi as FastAPI} from "react-icons/si";
-import { FaRaspberryPi as RaspPi} from "react-icons/fa";
-import { SiGooglecalendar as GCal} from "react-icons/si";
-import { TiWeatherPartlySunny as WeatherAPI} from "react-icons/ti";
-import { AiOutlineOpenAI as OpenAI} from "react-icons/ai";
+import { SiSpringboot as SpringBoot } from "react-icons/si";
+import { SiSpring as Spring } from "react-icons/si";
+import { FaBootstrap as Bootstrap } from "react-icons/fa";
+import { SiGooglegemini as GoogleGemini } from "react-icons/si";
+import { SiTensorflow as TF } from "react-icons/si";
+import { SiFastapi as FastAPI } from "react-icons/si";
+import { FaRaspberryPi as RaspPi } from "react-icons/fa";
+import { SiGooglecalendar as GCal } from "react-icons/si";
+import { TiWeatherPartlySunny as WeatherAPI } from "react-icons/ti";
+import { AiOutlineOpenAI as OpenAI } from "react-icons/ai";
+
+// Assign display names to icons
+ReactLogo.displayName = "React";
+DotNet.displayName = "ASP.NET";
+CSharp.displayName = "C#";
+JS.displayName = "JavaScript";
+JQuery.displayName = "jQuery";
+Typescript.displayName = "TypeScript";
+SpringBoot.displayName = "Spring Boot";
+Spring.displayName = "Spring";
+Bootstrap.displayName = "Bootstrap";
+GoogleGemini.displayName = "Google Gemini API";
+TF.displayName = "TensorFlow";
+FastAPI.displayName = "FastAPI";
+RaspPi.displayName = "Raspberry Pi";
+GCal.displayName = "Google Calendar API";
+WeatherAPI.displayName = "OpenWeather API";
+OpenAI.displayName = "OpenAI API";
+MySQL.displayName = "MySQL";
 
 const Projects = () => {
   
-  ReactLogo.displayName = "FaReact";
+  // Example of renaming ReactIcon is already shown above
+  // (other icons have been assigned displayName too)
 
   const projects = [
     {
       title: "Codecafé",
       description: "Google Docs for code. Collaborate on code in real-time.",
       image: Codecafe,
-      icons: [ReactLogo,Typescript,SpringBoot, Spring],
-      link: "https://github.com/mrktsm/codecafe"  // default link (or update with an actual URL)
+      icons: [ReactLogo, Typescript, SpringBoot, Spring],
+      link: "https://github.com/mrktsm/codecafe"
     },
     {
       title: "Kaleedo | Senior CS Capstone",
       description: "A contructivist digital humanties platform designed leveraging AI and NLP.",
-      image: Kaleedo, // Replace with your actual image path
-      icons: [DotNet, CSharp, JS, JQuery, MySQL, Bootstrap], // Add icons if needed
+      image: Kaleedo,
+      icons: [DotNet, CSharp, JS, JQuery, MySQL, Bootstrap],
       link: "https://kaleedo.net/"
     },
     {
       title: "Dermafyr | YCPHacks 2024 Winner 🏆",
-      description:
-        "Your unique skincare AI companion taylored to your skin type and concerns.",
-      image: Dermafyr, // Replace with your actual image path
-      icons: [ReactLogo, TF, FastAPI, GoogleGemini, RaspPi], // Add icons if needed
+      description: "Your unique skincare AI companion taylored to your skin type and concerns.",
+      image: Dermafyr,
+      icons: [ReactLogo, TF, FastAPI, GoogleGemini, RaspPi],
       link: "https://github.com/Andry-Arthur/dermafyr-ycp2024"
     },
     {
       title: "Climately | HackHarvard 2024",
-      description:
-        "Chrome extension for smart, weather-aware scheduling for Google Calendar.",
+      description: "Chrome extension for smart, weather-aware scheduling for Google Calendar.",
       image: ClimatelyLogo,
-      icons: [ReactLogo, GCal, SpringBoot, OpenAI, JS, WeatherAPI], // Add icons if needed
+      icons: [ReactLogo, GCal, SpringBoot, OpenAI, JS, WeatherAPI],
       link: "https://github.com/Andry-Arthur/Climately-HackHarvard2024"
     },
     {
       title: "Project Title: short desc",
-      description:
-        "Chrome extension providing dynamic weather updates and scheduling suggestions into your Google Calendar.",
+      description: "Chrome extension providing dynamic weather updates and scheduling suggestions into your Google Calendar.",
       image: "",
       icons: [],
       link: "#"
