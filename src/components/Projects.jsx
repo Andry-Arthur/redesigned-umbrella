@@ -24,6 +24,8 @@ import { FaRaspberryPi as RaspPi } from "react-icons/fa";
 import { SiGooglecalendar as GCal } from "react-icons/si";
 import { TiWeatherPartlySunny as WeatherAPI } from "react-icons/ti";
 import { AiOutlineOpenAI as OpenAI } from "react-icons/ai";
+import { DiRedis as Redis} from "react-icons/di";
+
 
 // Assign display names to icons
 ReactLogo.displayName = "React";
@@ -43,18 +45,17 @@ GCal.displayName = "Google Calendar API";
 WeatherAPI.displayName = "OpenWeather API";
 OpenAI.displayName = "OpenAI API";
 MySQL.displayName = "MySQL";
+Redis.displayName = "Redis";
 
 const Projects = () => {
   
-  // Example of renaming ReactIcon is already shown above
-  // (other icons have been assigned displayName too)
 
   const projects = [
     {
       title: "Codecafé",
       description: "Google Docs for code. Collaborate on code in real-time.",
       image: Codecafe,
-      icons: [ReactLogo, Typescript, SpringBoot, Spring],
+      icons: [ReactLogo, Typescript, SpringBoot, Spring, Redis],
       link: "https://github.com/mrktsm/codecafe"
     },
     {
