@@ -12,11 +12,10 @@
   }
   
   .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 30px;
+    justify-content: center;
   }
   
   .project-card {
@@ -89,5 +88,14 @@
   
     .projects-container {
       padding: 0 20px;
+    }
+    
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;  /* Center OverflowCard items horizontally */
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
   }

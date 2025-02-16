@@ -1,27 +1,47 @@
 // ProjectsSection.jsx
 import React from 'react';
 import './Projects.css';
+import OverflowCard from './OverflowCard';
+import { GrMysql } from "react-icons/gr";
+import ClimatelyLogo from '../assets/climatelyLogoCopy.png';
+import Dermafyr from '../assets/Dermafyr.png';
 
 const Projects = () => {
-  // Sample project data - replace with your actual projects
+  // Include the Yosemite project within your projects list data
   const projects = [
     {
-      title: "Project Title: short desc",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales orci. Morbi volutpat gravida dui, non facilisis risus. Sed vel porta turpis. Praesent quis arcu ut nisl bibendum commodo. Donec et porttitor enim.",
-      technologies: ["Tech 1", "Tech 1", "Tech 1", "Tech 1"],
-      image: "/api/placeholder/400/200" // Replace with your actual image path
+      title: "Codecafé",
+      description: "Google Docs for code. Collaborate on code in real-time.",
+      image: "",
+      mainImageSrcSet:
+        "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x",
+      mainImageAlt: "Scenic view",
+      icons: [GrMysql],
+      link: "#"  // default link (or update with an actual URL)
+    },
+    {
+      title: "Dermafyr",
+      description:
+        "Your unique skincare AI companion taylored to your skin type and concerns.",
+      image: Dermafyr, // Replace with your actual image path
+      icons: [], // Add icons if needed
+      link: "#"
+    },
+    {
+      title: "Climately | HackHarvard 2024",
+      description:
+        "Chrome extension providing dynamic weather updates and scheduling suggestions into your Google Calendar.",
+      image: ClimatelyLogo,
+      icons: [],
+      link: "#"
     },
     {
       title: "Project Title: short desc",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales orci. Morbi volutpat gravida dui, non facilisis risus. Sed vel porta turpis. Praesent quis arcu ut nisl bibendum commodo. Donec et porttitor enim.",
-      technologies: ["Tech 1", "Tech 1", "Tech 1", "Tech 1"],
-      image: "/api/placeholder/400/200"
-    },
-    {
-      title: "Project Title: short desc",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut sodales orci. Morbi volutpat gravida dui, non facilisis risus. Sed vel porta turpis. Praesent quis arcu ut nisl bibendum commodo. Donec et porttitor enim.",
-      technologies: ["Tech 1", "Tech 1", "Tech 1", "Tech 1"],
-      image: "/api/placeholder/400/200"
+      description:
+        "Chrome extension providing dynamic weather updates and scheduling suggestions into your Google Calendar.",
+      image: "",
+      icons: [],
+      link: "#"
     }
   ];
 
@@ -32,20 +52,16 @@ const Projects = () => {
           <h1 className="projects-title text-center mb-5">Projects</h1>
           <div className="projects-container">
             {projects.map((project, index) => (
-              <div key={index} className="project-card">
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                </div>
-                <div className="project-content">
-                  <h2 className="project-title">{project.title}</h2>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <OverflowCard
+                key={index}
+                mainImage={project.image}
+                mainImageSrcSet={project.mainImageSrcSet || project.image}
+                mainImageAlt={project.mainImageAlt || project.title}
+                title={project.title}
+                description={project.description}
+                icons={project.icons || []}
+                link={project.link || "#"}
+              />
             ))}
           </div>
         </div>
