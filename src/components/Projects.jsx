@@ -2,11 +2,15 @@
 import React from 'react';
 import './Projects.css';
 import OverflowCard from './OverflowCard';
+
+// Import project images
 import ClimatelyLogo from '../assets/climatelyLogoCopy.png';
 import Dermafyr from '../assets/Dermafyr.png';
 import Kaleedo from '../assets/Kaleedo.png';
 import Codecafe from '../assets/CodeCafe.png';
+import SmartMeal from '../assets/SmartMeal.png';
 
+// Import icons
 import { GrMysql as MySQL } from "react-icons/gr";
 import { AiOutlineDotNet as DotNet } from "react-icons/ai";
 import { TbBrandCSharp as CSharp } from "react-icons/tb";
@@ -25,6 +29,8 @@ import { SiGooglecalendar as GCal } from "react-icons/si";
 import { TiWeatherPartlySunny as WeatherAPI } from "react-icons/ti";
 import { AiOutlineOpenAI as OpenAI } from "react-icons/ai";
 import { DiRedis as Redis} from "react-icons/di";
+import { FaPhp as Php} from "react-icons/fa";
+
 
 
 // Assign display names to icons
@@ -46,6 +52,7 @@ WeatherAPI.displayName = "OpenWeather API";
 OpenAI.displayName = "OpenAI API";
 MySQL.displayName = "MySQL";
 Redis.displayName = "Redis";
+Php.displayName = "PHP";
 
 const Projects = () => {
   
@@ -60,7 +67,7 @@ const Projects = () => {
     },
     {
       title: "Kaleedo | Senior CS Capstone",
-      description: "A contructivist digital humanties platform designed leveraging AI and NLP.",
+      description: "A contructivist digital humanties platform designed for leveraging AI and NLP.",
       image: Kaleedo,
       icons: [DotNet, CSharp, JS, JQuery, MySQL, Bootstrap],
       link: "https://kaleedo.net/"
@@ -78,6 +85,13 @@ const Projects = () => {
       image: ClimatelyLogo,
       icons: [ReactLogo, GCal, SpringBoot, OpenAI, JS, WeatherAPI],
       link: "https://github.com/Andry-Arthur/Climately-HackHarvard2024"
+    },
+    {
+      title: "Smart Meal",
+      description: "Your all-in-one recipe hub to search, rate, and manage meals tailored to your pantry and preferences!",
+      image: SmartMeal,
+      icons: [Php, JS, MySQL],
+      link: "https://github.com/Andry-Arthur/Smart-Meal-Site"
     },
     {
       title: "Project Title: short desc",
