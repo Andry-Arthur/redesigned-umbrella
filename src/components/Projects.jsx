@@ -9,6 +9,7 @@ import Dermafyr from '../assets/Dermafyr.png';
 import Kaleedo from '../assets/Kaleedo.png';
 import Codecafe from '../assets/CodeCafe.png';
 import SmartMeal from '../assets/SmartMeal.png';
+import Ankicozmo from '../assets/AnkiLogo.png';
 
 // Import icons
 import { GrMysql as MySQL } from "react-icons/gr";
@@ -30,6 +31,10 @@ import { TiWeatherPartlySunny as WeatherAPI } from "react-icons/ti";
 import { AiOutlineOpenAI as OpenAI } from "react-icons/ai";
 import { DiRedis as Redis} from "react-icons/di";
 import { FaPhp as Php} from "react-icons/fa";
+import { SiNumpy as Numpy} from "react-icons/si";
+import { FaPython as Python} from "react-icons/fa";
+import { SiPandas as Pandas} from "react-icons/si";
+import { SiOpencv as OpenCV} from "react-icons/si";
 
 
 
@@ -53,6 +58,10 @@ OpenAI.displayName = "OpenAI API";
 MySQL.displayName = "MySQL";
 Redis.displayName = "Redis";
 Php.displayName = "PHP";
+Numpy.displayName = "NumPy";
+Python.displayName = "Python";
+Pandas.displayName = "Pandas";
+OpenCV.displayName = "OpenCV";
 
 const Projects = () => {
   
@@ -94,8 +103,15 @@ const Projects = () => {
       link: "https://github.com/Andry-Arthur/Smart-Meal-Site"
     },
     {
+      title: "Anki Cozmo Montecarlo Localization",
+      description: "Solving Cozmo's kidnapping problem with Monte Carlo Localization.",
+      image: Ankicozmo,
+      icons: [Python, Numpy, Pandas, OpenCV],
+      link: "http://cs.gettysburg.edu/~tneller/archive/cs371/cozmo/22sp/rakotonjanabelo/ankimontecarlo.wordpress.com/index.html"
+    },
+    {
       title: "Project Title: short desc",
-      description: "Chrome extension providing dynamic weather updates and scheduling suggestions into your Google Calendar.",
+      description: "Coming Soon...",
       image: "",
       icons: [],
       link: "#"
