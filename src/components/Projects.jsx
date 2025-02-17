@@ -111,7 +111,7 @@ const Projects = () => {
     },
     {
       title: "Project Title: short desc",
-      description: "Coming Soon...",
+      description: "Coming Soon... Coding magic in progress!",
       image: "",
       icons: [],
       link: "#"

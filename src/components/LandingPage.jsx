@@ -79,8 +79,15 @@ const LandingPage = () => {
             </h2>
             <h3 className="h1 mb-2">Junior Software Engineer</h3>
             <p className="h3 mb-4">
-              Computer Science & Data Science<br />
-              at Gettysburg College
+              Computer Science & Data Science<br />at{' '}
+              <a
+                href="https://www.gettysburg.edu"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: 'inherit', textDecoration: 'underline' }}
+              >
+                Gettysburg College
+              </a>
             </p>
             {/* Location Information */}
             <div className="d-flex flex-column gap-2 align-items-end">
