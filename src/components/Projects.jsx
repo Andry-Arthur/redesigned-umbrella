@@ -10,6 +10,7 @@ import Kaleedo from '../assets/Kaleedo.png';
 import Codecafe from '../assets/CodeCafe.png';
 import SmartMeal from '../assets/SmartMeal.png';
 import Ankicozmo from '../assets/AnkiLogo.png';
+import OptimusTime from '../assets/OptimusTime.jpg';
 
 // Import icons
 import { GrMysql as MySQL } from "react-icons/gr";
@@ -35,6 +36,9 @@ import { SiNumpy as Numpy} from "react-icons/si";
 import { FaPython as Python} from "react-icons/fa";
 import { SiPandas as Pandas} from "react-icons/si";
 import { SiOpencv as OpenCV} from "react-icons/si";
+import { BiLogoPostgresql as Postgres} from "react-icons/bi";
+import { FaJava as Java } from "react-icons/fa";
+import { TbCircleLetterTFilled as TerraAPI} from "react-icons/tb";
 
 
 
@@ -62,6 +66,9 @@ Numpy.displayName = "NumPy";
 Python.displayName = "Python";
 Pandas.displayName = "Pandas";
 OpenCV.displayName = "OpenCV";
+Postgres.displayName = "PostgreSQL";
+Java.displayName = "Java";
+TerraAPI.displayName = "TerraAPI";
 
 const Projects = () => {
   
@@ -108,6 +115,13 @@ const Projects = () => {
       image: Ankicozmo,
       icons: [Python, Numpy, Pandas, OpenCV],
       link: "http://cs.gettysburg.edu/~tneller/archive/cs371/cozmo/22sp/rakotonjanabelo/ankimontecarlo.wordpress.com/index.html"
+    },
+    {
+      title: "Optimus Time | HackHarvard 2023",
+      description: "Health data-driven smart scheduling boosting productivity while preventing burnout.",
+      image: OptimusTime,
+      icons: [Java, Postgres, TerraAPI],
+      link: "https://devpost.com/software/optimustime"
     },
     {
       title: "Project Title: short desc",
