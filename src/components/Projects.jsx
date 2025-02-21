@@ -11,6 +11,8 @@ import Codecafe from '../assets/CodeCafe.png';
 import SmartMeal from '../assets/SmartMeal.png';
 import Ankicozmo from '../assets/AnkiLogo.png';
 import OptimusTime from '../assets/OptimusTime.jpg';
+import Youtube from '../assets/Youtube.png';
+
 
 // Import icons
 import { GrMysql as MySQL } from "react-icons/gr";
@@ -39,7 +41,7 @@ import { SiOpencv as OpenCV} from "react-icons/si";
 import { BiLogoPostgresql as Postgres} from "react-icons/bi";
 import { FaJava as Java } from "react-icons/fa";
 import { TbCircleLetterTFilled as TerraAPI} from "react-icons/tb";
-
+import { FaVideo as Video} from "react-icons/fa";
 
 
 // Assign display names to icons
@@ -69,6 +71,7 @@ OpenCV.displayName = "OpenCV";
 Postgres.displayName = "PostgreSQL";
 Java.displayName = "Java";
 TerraAPI.displayName = "TerraAPI";
+Video.displayName = "Video Editing";
 
 const Projects = () => {
   
@@ -122,6 +125,13 @@ const Projects = () => {
       image: OptimusTime,
       icons: [Java, Postgres, TerraAPI],
       link: "https://devpost.com/software/optimustime"
+    },
+    {
+      title: "CS with Andry | Youtube Channel",
+      description: "My coding journey, uncensored. YouTube videos of problem-solving, projects, and everything in between.",
+      image: Youtube,
+      icons: [Java, Python, Video],
+      link: "https://www.youtube.com/@cswithandry"
     },
     {
       title: "Project Title: short desc",
