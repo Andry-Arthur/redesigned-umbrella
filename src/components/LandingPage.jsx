@@ -7,6 +7,7 @@ import palmGif from '../assets/palm.gif';  // Import palm tree GIF
 import andry1 from '../assets/Andry1.jpg';  // Import profile image
 import andry2 from '../assets/Andry2.jpg';  // Import profile image
 import andry3 from '../assets/GoChangeTheWorld.jpg';  // Import profile image
+import andry4 from '../assets/Andry4.jpeg';  // Import profile image
 
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -15,7 +16,8 @@ const LandingPage = () => {
   const images = [
     andry1,
     andry2,
-    andry3
+    andry3,
+    andry4
   ];
 
   useEffect(() => {
