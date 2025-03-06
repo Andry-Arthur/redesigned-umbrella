@@ -12,6 +12,7 @@ import SmartMeal from '../assets/SmartMeal.png';
 import Ankicozmo from '../assets/AnkiLogo.png';
 import OptimusTime from '../assets/OptimusTime.jpg';
 import Youtube from '../assets/Youtube.png';
+import SwiftApply from '../assets/SwiftApply.png';
 
 
 // Import icons
@@ -42,6 +43,8 @@ import { BiLogoPostgresql as Postgres} from "react-icons/bi";
 import { FaJava as Java } from "react-icons/fa";
 import { TbCircleLetterTFilled as TerraAPI} from "react-icons/tb";
 import { FaVideo as Video} from "react-icons/fa";
+import { BsBrowserChrome as BrowserUse} from "react-icons/bs";
+
 
 
 // Assign display names to icons
@@ -72,11 +75,19 @@ Postgres.displayName = "PostgreSQL";
 Java.displayName = "Java";
 TerraAPI.displayName = "TerraAPI";
 Video.displayName = "Video Editing";
+BrowserUse.displayName = "browser-use agent";
 
 const Projects = () => {
   
 
   const projects = [
+    {
+      title: "SwiftApply | HenHacks 2025",
+      description: "Your job application AI agent freeing you from the job application grind.",
+      image: SwiftApply,
+      icons: [ReactLogo, BrowserUse, Python, Typescript, Spring, MySQL],
+      link: "https://devpost.com/software/swiftapply"
+    },
     {
       title: "Codecafé",
       description: "Google Docs for code. Collaborate on code in real-time.",
