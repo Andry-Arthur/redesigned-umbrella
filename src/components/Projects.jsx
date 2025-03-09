@@ -85,7 +85,7 @@ const Projects = () => {
       title: "SwiftApply | HenHacks 2025",
       description: "Your job application AI agent freeing you from the job application grind.",
       image: SwiftApply,
-      icons: [ReactLogo, BrowserUse, Python, Typescript, Java, Spring, MySQL],
+      icons: [ReactLogo, BrowserUse, Python, Typescript, Spring, MySQL],
       link: "https://devpost.com/software/swiftapply"
     },
     {
