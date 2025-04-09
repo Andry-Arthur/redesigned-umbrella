@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Globe, ChevronsDown } from 'lucide-react';
 import Navbar from './Navbar'; // Import the new Navbar component
+import NewPalm from './NewPalm'; // Import the new palm tree SVG component
 import './LandingPage.css';  // For custom styles
 import palmGif from '../assets/palm.gif';  // Import palm tree GIF
 import andry1 from '../assets/Andry1.jpg';  // Import profile image
@@ -39,7 +40,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="landing-page min-vh-100">
+    <div className="landing-page min-vh-100 position-relative">
       {/* Main Content */}
       <div className="container mt-4">
         <h1 className="text-white display-3 fw-bold mb-5 chela-one-regular" style={{ zIndex: 2 }}>Welcome</h1>
@@ -105,10 +106,10 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="palm-container text-center mt-4">
-          <img src={palmGif} alt="Palm Tree GIF" className="img-fluid palm-img" style={{ zIndex: 0 }} />
+          <NewPalm className="img-fluid palm-img" style={{ zIndex: -1 }} />
         </div>
         {/* Add Chevron at the end of the Landing Page section */}
-        <div className="text-center mt-4" style={{ zIndex: 2 }}>
+        <div className="text-center mt-4" style={{ zIndex: 2, position: "relative" }}>
           <button
             className="chevron-btn btn btn-link"
             onClick={handleProjectsClick}
