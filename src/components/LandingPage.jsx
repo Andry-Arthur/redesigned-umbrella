@@ -1,10 +1,8 @@
 // LandingPage.jsx
 import React, { useState, useEffect } from 'react';
 import { MapPin, Globe, ChevronsDown } from 'lucide-react';
-import Navbar from './Navbar'; // Import the new Navbar component
 import NewPalm from './NewPalm'; // Import the new palm tree SVG component
 import './LandingPage.css';  // For custom styles
-import palmGif from '../assets/palm.gif';  // Import palm tree GIF
 import andry1 from '../assets/Andry1.jpg';  // Import profile image
 import andry2 from '../assets/Andry2.jpg';  // Import profile image
 import andry3 from '../assets/GoChangeTheWorld.jpg';  // Import profile image
