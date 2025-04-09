@@ -11,6 +11,16 @@ const Navbar = () => {
     setIsExpanded(!isExpanded);
   };
 
+  // Add function to scroll to timeline section
+  const scrollToTimeline = (event) => {
+    event.preventDefault();
+    const timelineSection = document.getElementById("timeline");
+    if (timelineSection) {
+      timelineSection.scrollIntoView({ behavior: "smooth" });
+      setIsExpanded(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-dark ${isExpanded ? 'show-background' : ''}`}>
       <div className="container-fluid justify-content-end">
@@ -35,7 +45,7 @@ const Navbar = () => {
               <Link className="nav-link" to="/projects">PROJECTS</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/resume">RESUME</Link>
+              <a className="nav-link" href="#timeline" onClick={scrollToTimeline}>TIMELINE</a>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">CONTACT</Link>
