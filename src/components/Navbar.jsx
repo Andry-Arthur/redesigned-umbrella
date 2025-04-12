@@ -11,12 +11,32 @@ const Navbar = () => {
     setIsExpanded(!isExpanded);
   };
 
-  // Add function to scroll to timeline section
+  // Scroll to timeline section
   const scrollToTimeline = (event) => {
     event.preventDefault();
     const timelineSection = document.getElementById("timeline");
     if (timelineSection) {
       timelineSection.scrollIntoView({ behavior: "smooth" });
+      setIsExpanded(false); // Close mobile menu after clicking
+    }
+  };
+  
+  // Scroll to projects section
+  const scrollToProjects = (event) => {
+    event.preventDefault();
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+      setIsExpanded(false); // Close mobile menu after clicking
+    }
+  };
+  
+  // Scroll to contact section (footer)
+  const scrollToContact = (event) => {
+    event.preventDefault();
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
       setIsExpanded(false); // Close mobile menu after clicking
     }
   };
@@ -42,13 +62,13 @@ const Navbar = () => {
               <Link className="nav-link" to="/redesigned-umbrella">HOME</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects">PROJECTS</Link>
+              <a className="nav-link" href="#projects" onClick={scrollToProjects}>PROJECTS</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#timeline" onClick={scrollToTimeline}>TIMELINE</a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">CONTACT</Link>
+              <a className="nav-link" href="#contact-section" onClick={scrollToContact}>CONTACT</a>
             </li>
           </ul>
         </div>

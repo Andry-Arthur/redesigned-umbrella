@@ -16,7 +16,7 @@ const Footer = () => {
   const linkedinMessageLink = 'https://www.linkedin.com/messaging/compose/?to=andryart10';
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact-section">
       <div className="footer-container">
         <div className="footer-info">
           <h2 className="footer-title">My Contacts</h2>

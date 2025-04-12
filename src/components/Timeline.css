@@ -43,3 +43,190 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Audio control styling */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 8px;
+}
+
+.audio-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.audio-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.audio-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 8px;
+}
+
+/* Enhanced Audio Player Styling */
+.audio-player-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  padding: 16px 30px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 50px;
+  max-width: 400px; /* Increased from 360px to make it wider */
+  width: 90%; /* Allow it to scale with the container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.audio-player-container:hover {
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.audio-track-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  min-width: 120px; /* Slightly increased from 110px */
+  justify-content: center;
+}
+
+.music-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 4px; /* Add spacing between title and artist */
+}
+
+.music-artist {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Keep buttons the same size but increase gap between them */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased from 10px */
+}
+
+.audio-btn {
+  width: 48px;  /* Increased from 36px to 48px */
+  height: 48px; /* Increased from 36px to 48px */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #222;
+  padding: 0;  /* Remove any padding that might affect centering */
+}
+
+.audio-btn:hover {
+  background-color: rgba(0, 0, 0, 0.18);
+  transform: scale(1.1);
+  color: #000;
+}
+
+.audio-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.audio-status {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-left: 8px;
+  min-width: 60px; /* Increased from 45px */
+}
+
+/* Music suggestion styling */
+.music-suggestion {
+  font-size: 0.85rem;
+  color: #555;
+  opacity: 0.8;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.music-suggestion:hover {
+  opacity: 1;
+}
+
+/* Hide suggestion when music is playing */
+.audio-player-container + .music-suggestion {
+  opacity: 0.8;
+  transform: translateY(-5px);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 0.8; transform: translateY(-5px); }
+}
+
+/* Mobile responsiveness for audio player */
+@media (max-width: 576px) {
+  .audio-player-container {
+    flex-direction: column;
+    padding: 16px 20px;
+    max-width: 90%;
+    border-radius: 20px;
+  }
+  
+  .audio-track-info {
+    margin-right: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    min-width: unset;
+  }
+  
+  .audio-controls {
+    justify-content: center;
+  }
+  
+  .music-title {
+    font-size: 1rem;
+  }
+  
+  .music-artist {
+    font-size: 0.8rem;
+  }
+  
+  .audio-status {
+    min-width: 70px;
+    text-align: center;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+  .audio-player-container {
+    max-width: 95%;
+  }
+}

@@ -13,6 +13,8 @@ import Ankicozmo from '../assets/AnkiLogo.png';
 import OptimusTime from '../assets/OptimusTime.jpg';
 import Youtube from '../assets/Youtube.png';
 import SwiftApply from '../assets/SwiftApply.png';
+import GraphTheory from '../assets/GraphTheory.png';
+import GraphPaper from '../assets/Graph_Theory_Paper.pdf';
 
 
 // Import icons
@@ -44,6 +46,8 @@ import { FaJava as Java } from "react-icons/fa";
 import { TbCircleLetterTFilled as TerraAPI} from "react-icons/tb";
 import { FaVideo as Video} from "react-icons/fa";
 import { BsBrowserChrome as BrowserUse} from "react-icons/bs";
+import { SiOverleaf as Overleaf } from "react-icons/si";
+import { TbMath as Math } from "react-icons/tb";
 
 
 
@@ -76,6 +80,8 @@ Java.displayName = "Java";
 TerraAPI.displayName = "TerraAPI";
 Video.displayName = "Video Editing";
 BrowserUse.displayName = "browser-use agent";
+Overleaf.displayName = "Overleaf + Latex";
+Math.displayName = "Math Writing";
 
 const Projects = () => {
   
@@ -122,6 +128,13 @@ const Projects = () => {
       image: SmartMeal,
       icons: [Php, JS, MySQL],
       link: "https://github.com/Andry-Arthur/Smart-Meal-Site"
+    },
+    {
+      title: "Graph Theory : Book and Web Graph",
+      description: "Turning Pages, Spinning Webs: Unfolding the Book and Web of Graphs.",
+      image: GraphTheory,
+      icons: [Overleaf, Math],
+      link: GraphPaper
     },
     {
       title: "Anki Cozmo Montecarlo Localization",
