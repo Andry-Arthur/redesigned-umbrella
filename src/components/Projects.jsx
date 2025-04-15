@@ -94,7 +94,7 @@ const Projects = () => {
   const projects = [
     {
       title: "KeylessCampus | BitCamp 2025",
-      description: "Smart RFID door unlocking system for college dorms.",
+      description: "Smart RFID door unlocking system for college dorms dorms. No more keys.",
       image: KeylessCampus,
       icons: [ReactLogo, Java, Postgres, ESP32Chip, CIcon],
       link: "https://devpost.com/software/project-209"
@@ -108,7 +108,7 @@ const Projects = () => {
     },
     {
       title: "Codecafé",
-      description: "Google Docs for code. Collaborate on code in real-time.",
+      description: "Google Docs for code. Collaborate on code in real-time within one click of a button.",
       image: Codecafe,
       icons: [ReactLogo, Typescript, SpringBoot, Spring, Redis],
       link: "https://github.com/mrktsm/codecafe"
