@@ -94,7 +94,7 @@ const Projects = () => {
   const projects = [
     {
       title: "KeylessCampus | BitCamp 2025",
-      description: "Smart RFID door unlocking system for college dorms that eliminates lost key frustration and $100+ replacement fees forever.",
+      description: "Smart RFID door unlocking system for college dorms.",
       image: KeylessCampus,
       icons: [ReactLogo, Java, Postgres, ESP32Chip, CIcon],
       link: "https://devpost.com/software/project-209"
