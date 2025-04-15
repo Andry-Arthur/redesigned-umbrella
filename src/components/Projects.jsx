@@ -97,7 +97,7 @@ const Projects = () => {
       description: "Smart RFID door unlocking system for college dorms that eliminates lost key frustration and $100+ replacement fees forever.",
       image: KeylessCampus,
       icons: [ReactLogo, Java, Postgres, ESP32Chip, CIcon],
-      link: "https://github.com/Andry-Arthur/KeylessCampus"
+      link: "https://devpost.com/software/project-209"
     },
     {
       title: "SwiftApply | HenHacks 2025",
