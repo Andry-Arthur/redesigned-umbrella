@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Instagram, Video } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Video, Github } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   
   const contactItems = [
+    { id: 'github', icon: <Github size={20} />, text: 'Andry-Arthur', link: 'https://github.com/Andry-Arthur' },
     { id: 'youtube', icon: <Video size={20} />, text: '@cswithandry', link: 'https://youtube.com/@cswithandry' },
     { id: 'linkedin', icon: <Linkedin size={20} />, text: '/andryart10', link: 'https://linkedin.com/in/andryart10' },
     { id: 'email', icon: <Mail size={20} />, text: 'andry1arthur@gmail.com', link: 'mailto:andry1arthur@gmail.com' },

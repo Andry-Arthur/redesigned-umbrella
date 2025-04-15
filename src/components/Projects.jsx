@@ -15,6 +15,7 @@ import Youtube from '../assets/Youtube.png';
 import SwiftApply from '../assets/SwiftApply.png';
 import GraphTheory from '../assets/GraphTheory.png';
 import GraphPaper from '../assets/Graph_Theory_Paper.pdf';
+import KeylessCampus from '../assets/KeylessCampus.png';
 
 
 // Import icons
@@ -48,6 +49,8 @@ import { FaVideo as Video} from "react-icons/fa";
 import { BsBrowserChrome as BrowserUse} from "react-icons/bs";
 import { SiOverleaf as Overleaf } from "react-icons/si";
 import { TbMath as Math } from "react-icons/tb";
+import { HiMiniCpuChip as ESP32Chip} from "react-icons/hi2";
+import { SiC as CIcon} from 'react-icons/si';
 
 
 
@@ -82,11 +85,20 @@ Video.displayName = "Video Editing";
 BrowserUse.displayName = "browser-use agent";
 Overleaf.displayName = "Overleaf + Latex";
 Math.displayName = "Math Writing";
+ESP32Chip.displayName = "ESP32 Chip";
+CIcon.displayName = "C";
 
 const Projects = () => {
   
 
   const projects = [
+    {
+      title: "KeylessCampus | BitCamp 2025",
+      description: "Smart RFID door unlocking system for college dorms that eliminates lost key frustration and $100+ replacement fees forever.",
+      image: KeylessCampus,
+      icons: [ReactLogo, Java, Postgres, ESP32Chip, CIcon],
+      link: "https://github.com/Andry-Arthur/KeylessCampus"
+    },
     {
       title: "SwiftApply | HenHacks 2025",
       description: "Your job application AI agent freeing you from the job application grind.",
