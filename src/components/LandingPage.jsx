@@ -78,7 +78,7 @@ const LandingPage = () => {
             <h2 className="display-2 fw-bold mb-3 chela-one-regular">
               Andry A.<br />Rakotonjanabelo
             </h2>
-            <h3 className="h1 mb-2">Junior Software Engineer</h3>
+            <h3 className="h1 mb-2">AI/ML Software Engineer</h3>
             <p className="h3 mb-4">
               Computer Science & Data Science<br />at{' '}
               <a
@@ -94,7 +94,7 @@ const LandingPage = () => {
             <div className="d-flex flex-column gap-2 align-items-end">
               <div className="d-flex align-items-center justify-content-end">
                 <MapPin className="me-2" />
-                <span>Gettysburg, PA, USA</span>
+                <span>Boston, MA, USA</span>
               </div>
               <div className="d-flex align-items-center justify-content-end">
                 <Globe className="me-2" />
