@@ -94,7 +94,7 @@ const LandingPage = () => {
             <div className="d-flex flex-column gap-2 align-items-end">
               <div className="d-flex align-items-center justify-content-end">
                 <MapPin className="me-2" />
-                <span>Boston, MA, USA</span>
+                <span>San Francisco Bay Area, CA, USA</span>
               </div>
               <div className="d-flex align-items-center justify-content-end">
                 <Globe className="me-2" />
