@@ -16,6 +16,7 @@ import SwiftApply from '../assets/SwiftApply.png';
 import GraphTheory from '../assets/GraphTheory.png';
 import GraphPaper from '../assets/Graph_Theory_Paper.pdf';
 import KeylessCampus from '../assets/KeylessCampus.png';
+import SubHunt from '../assets/SubHunt.png';
 
 
 // Import icons
@@ -51,6 +52,12 @@ import { SiOverleaf as Overleaf } from "react-icons/si";
 import { TbMath as Math } from "react-icons/tb";
 import { HiMiniCpuChip as ESP32Chip} from "react-icons/hi2";
 import { SiC as CIcon} from 'react-icons/si';
+import { SiGodotengine as Godot } from "react-icons/si";
+import { MdSpatialAudioOff as SpatialAudio} from "react-icons/md";
+import { IoAccessibility as BlindAccessibility} from "react-icons/io5";
+import { LuGamepad2 as GameDesign} from "react-icons/lu";
+
+
 
 
 
@@ -87,7 +94,10 @@ Overleaf.displayName = "Overleaf + Latex";
 Math.displayName = "Math Writing";
 ESP32Chip.displayName = "ESP32 Chip";
 CIcon.displayName = "C";
-
+Godot.displayName = "Godot Engine";
+SpatialAudio.displayName = "Spatial Audio";
+BlindAccessibility.displayName = "Blind Accessibility";
+GameDesign.displayName = "Game Design";
 const Projects = () => {
   
 
@@ -140,6 +150,13 @@ const Projects = () => {
       image: SmartMeal,
       icons: [Php, JS, MySQL],
       link: "https://github.com/Andry-Arthur/Smart-Meal-Site"
+    },
+    {
+      title: "SubHunt | GFBG 4 Game Jam 2025",
+      description: "Blind-accessible 3D submarine hunting game that turns spatial audio into your primary weapon.",
+      image: SubHunt,
+      icons: [Godot, SpatialAudio, BlindAccessibility, GameDesign],
+      link: "https://github.com/Andry-Arthur/SubHunt"
     },
     {
       title: "Graph Theory : Book and Web Graph",
