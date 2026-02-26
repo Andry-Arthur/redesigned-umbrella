@@ -19,7 +19,14 @@ export default function OverflowCard({
     link = '#'  // Default link to the same page
 }) {
     return (
-        <Box component="a" href={link} sx={{ width: { xs: 300, sm: 400 } }}>
+        <Box
+            component="a"
+            href={link}
+            sx={{ width: { xs: 300, sm: 400 } }}
+            itemScope
+            itemType="https://schema.org/CreativeWork"
+            itemProp="itemListElement"
+        >
             <Card variant="outlined" sx={{ width: { xs: 300, sm: 400 } }}>
                 <CardOverflow>
                     <AspectRatio ratio="2">
@@ -28,12 +35,17 @@ export default function OverflowCard({
                             srcSet={mainImageSrcSet || placeholderImage}
                             loading="lazy"
                             alt={mainImageAlt || "Placeholder Image"}
+                            itemProp="image"
                         />
                     </AspectRatio>
                 </CardOverflow>
                 <CardContent>
-                    <Typography level="title-md">{title}</Typography>
-                    <Typography level="body-sm">{description}</Typography>
+                    <Typography level="title-md" itemProp="name">
+                        {title}
+                    </Typography>
+                    <Typography level="body-sm" itemProp="description">
+                        {description}
+                    </Typography>
                 </CardContent>
                 <CardOverflow variant="soft" sx={{ bgcolor: 'background.level1' }}>
                     <Divider inset="context" />

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andry-arthur.github.io/redesigned-umbrella/sitemap.xml
+

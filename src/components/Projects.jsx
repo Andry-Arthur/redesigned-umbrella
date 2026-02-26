@@ -196,10 +196,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      itemScope
+      itemType="https://schema.org/ItemList"
+    >
       <div className="projects-section">
         <div className="container py-5">
-          <h1 className="projects-title text-center mb-5">Projects</h1>
+          <h1
+            id="projects-heading"
+            className="projects-title text-center mb-5"
+            itemProp="name"
+          >
+            Projects
+          </h1>
           <div className="projects-container">
             {projects.map((project, index) => (
               <OverflowCard

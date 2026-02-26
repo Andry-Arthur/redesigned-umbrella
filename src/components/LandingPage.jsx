@@ -53,7 +53,7 @@ const LandingPage = () => {
                   <div className="carousel-image-container">
                     <img
                       src={images[currentImageIndex]}
-                      alt="Profile"
+                      alt="Portraits of Andry Rakotonjanabelo, AI/ML software engineer"
                       className="img-fluid"
                       style={{ zIndex: 1 }}
                     />
