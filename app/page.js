@@ -98,7 +98,7 @@ export default function Home() {
               <h3>{award.title}</h3>
               <p className="subtitle">{award.subtitle}</p>
               <p>{award.description}</p>
-              <a href={award.link} target="_blank" rel="noreferrer">
+              <a href={award.link} target="_blank" rel="noreferrer noopener">
                 View award profile
               </a>
             </article>
