@@ -49,6 +49,15 @@ const projects = [
   },
 ];
 
+const awards = [
+  {
+    title: "MLH Top 50 2025",
+    subtitle: "Major League Hacking",
+    description: "Selected as one of MLH's Top 50 hackers for 2025.",
+    link: "https://top.mlh.io/2025/profiles/andry-rakotonjanabelo",
+  },
+];
+
 export default function Home() {
   return (
     <main className="page">
@@ -79,6 +88,22 @@ export default function Home() {
           I build practical AI/ML products, accessibility-first experiences, and hackathon-grade prototypes that ship fast.
           This site is now rebuilt with Next.js and centered around my latest public profile information.
         </p>
+      </section>
+
+      <section className="section">
+        <h2>Prestigious Awards</h2>
+        <div className="grid">
+          {awards.map((award) => (
+            <article key={award.title} className="card">
+              <h3>{award.title}</h3>
+              <p className="subtitle">{award.subtitle}</p>
+              <p>{award.description}</p>
+              <a href={award.link} target="_blank" rel="noreferrer">
+                View award profile
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section">
