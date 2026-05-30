@@ -131,6 +131,15 @@ const projects = [
   },
 ];
 
+const awards = [
+  {
+    title: "MLH Top 50 2025",
+    subtitle: "Major League Hacking",
+    description: "Recognized among MLH's Top 50 hackers for 2025.",
+    link: "https://top.mlh.com/2025/profiles/andry-rakotonjanabelo",
+  },
+];
+
 const contactItems = [
   { id: "github", icon: MessageCircle, text: "Andry-Arthur", link: profile.github },
   { id: "youtube", icon: Play, text: "@cswithandry", link: profile.youtube },
@@ -239,6 +248,23 @@ export default function Home() {
           <div className="projects-container">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="awards-section" id="awards">
+        <div className="container py-5">
+          <h1 className="projects-title text-center mb-5 chela-one-regular">Awards</h1>
+          <div className="awards-container">
+            {awards.map((award) => (
+              <a key={award.title} className="award-card" href={award.link} target="_blank" rel="noreferrer noopener">
+                <div className="award-badge">Featured Award</div>
+                <h3 className="award-title">{award.title}</h3>
+                <p className="award-subtitle">{award.subtitle}</p>
+                <p className="award-description">{award.description}</p>
+                <span className="award-link">Open award profile</span>
+              </a>
             ))}
           </div>
         </div>

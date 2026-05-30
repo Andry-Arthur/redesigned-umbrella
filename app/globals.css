@@ -329,6 +329,12 @@ img {
   padding: 40px 0;
 }
 
+.awards-section {
+  background: linear-gradient(180deg, #002657 0%, #0a3b82 100%);
+  min-height: 48vh;
+  padding: 34px 0 42px;
+}
+
 .projects-title {
   color: #ffffff !important;
   font-size: clamp(2.4rem, 4vw, 3.3rem);
@@ -340,6 +346,72 @@ img {
   grid-template-columns: repeat(2, minmax(0, max-content));
   gap: 30px;
   justify-content: center;
+}
+
+.awards-container {
+  display: grid;
+  grid-template-columns: minmax(280px, 460px);
+  justify-content: center;
+}
+
+.award-card {
+  display: block;
+  border-radius: 18px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.award-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.2);
+}
+
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.award-title {
+  margin: 14px 0 6px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.award-subtitle {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.award-description {
+  margin: 0 0 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.award-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.award-link::after {
+  content: "↗";
 }
 
 .project-card {
@@ -699,6 +771,11 @@ img {
     margin: 0 auto;
   }
 
+  .awards-container {
+    width: min(100%, 860px);
+    margin: 0 auto;
+  }
+
   .footer-container {
     flex-direction: column;
   }
@@ -741,6 +818,10 @@ img {
   .projects-container {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .awards-container {
+    grid-template-columns: 1fr;
   }
 
   .project-card {
