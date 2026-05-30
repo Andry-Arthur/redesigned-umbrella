@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 
+import { assetPath } from "../lib/asset-path";
+
 export default function TimelinePlayer({ src }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -79,7 +81,7 @@ export default function TimelinePlayer({ src }) {
         <div className="audio-status">{audioError ? "Audio error" : isPlaying ? "Playing" : "Paused"}</div>
       </div>
 
-      <audio ref={audioRef} src={src} loop preload="auto" />
+      <audio ref={audioRef} src={assetPath(src)} loop preload="auto" />
     </div>
   );
 }

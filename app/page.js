@@ -3,6 +3,7 @@ import { ChevronDown, Globe, Link, Mail, MapPin, MessageCircle, Play } from "luc
 
 import HeroCarousel from "./components/HeroCarousel";
 import TimelinePlayer from "./components/TimelinePlayer";
+import { assetPath } from "./lib/asset-path";
 
 const profile = {
   name: "Andry A. Rakotonjanabelo",
@@ -95,7 +96,7 @@ const projects = [
     image: "/vite-assets/GraphTheory.png",
     alt: "Graph Theory project thumbnail",
     techs: ["Overleaf", "Math"],
-    link: "/vite-assets/Graph_Theory_Paper.pdf",
+    link: assetPath("/vite-assets/Graph_Theory_Paper.pdf"),
   },
   {
     title: "Anki Cozmo Montecarlo Localization",
@@ -230,7 +231,7 @@ export default function Home() {
           </div>
 
           <div className="palm-container" aria-hidden="true">
-            <Image src="/vite-assets/palm.gif" alt="" width={170} height={170} unoptimized priority={false} className="palm-img" />
+            <Image src={assetPath("/vite-assets/palm.gif")} alt="" width={170} height={170} unoptimized priority={false} className="palm-img" />
           </div>
 
           <div className="text-center mt-4 scroll-indicator-shell">
@@ -274,7 +275,7 @@ export default function Home() {
         <div className="container py-5">
           <h1 className="projects-title text-center mb-5 chela-one-regular">My Journey</h1>
 
-          <TimelinePlayer src="/vite-assets/music/Silver-Gold-LODE.mp3" />
+          <TimelinePlayer src={assetPath("/vite-assets/music/Silver-Gold-LODE.mp3")} />
 
           <div className="music-suggestion text-center mb-4">
             <em>💡 Enhance your journey through time with some background music</em>
