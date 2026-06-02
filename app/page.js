@@ -27,6 +27,14 @@ const landingImages = [
 
 const projects = [
   {
+    title: "NightShift AGI | Startup",
+    description: "All-in-One Intelligence Marketplace.",
+    image: assetPath("/vite-assets/NightShift.png"),
+    alt: "NightShift AGI project thumbnail",
+    techs: ["Next.js", "React", "TypeScript", "Supabase", "Kubernetes", "MCP"],
+    link: "https://nightshift-agi.com",
+  },
+  {
     title: "KeylessCampus | BitCamp 2025",
     description: "Smart RFID door unlocking system for college dorms. No more keys.",
     image: assetPath("/vite-assets/KeylessCampus.png"),
