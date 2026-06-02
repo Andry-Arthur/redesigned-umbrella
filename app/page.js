@@ -19,17 +19,17 @@ const profile = {
 };
 
 const landingImages = [
-  { src: "/vite-assets/Andry1.jpg", alt: "Andry in a suit, outdoors" },
-  { src: "/vite-assets/Andry2.jpg", alt: "Andry smiling at an event" },
-  { src: "/vite-assets/GoChangeTheWorld.jpg", alt: "Andry at the Go Change the World event" },
-  { src: "/vite-assets/Andry4.jpeg", alt: "Andry portrait in a dark jacket" },
+  { src: assetPath("/vite-assets/Andry1.jpg"), alt: "Andry in a suit, outdoors" },
+  { src: assetPath("/vite-assets/Andry2.jpg"), alt: "Andry smiling at an event" },
+  { src: assetPath("/vite-assets/GoChangeTheWorld.jpg"), alt: "Andry at the Go Change the World event" },
+  { src: assetPath("/vite-assets/Andry4.jpeg"), alt: "Andry portrait in a dark jacket" },
 ];
 
 const projects = [
   {
     title: "KeylessCampus | BitCamp 2025",
     description: "Smart RFID door unlocking system for college dorms. No more keys.",
-    image: "/vite-assets/KeylessCampus.png",
+    image: assetPath("/vite-assets/KeylessCampus.png"),
     alt: "KeylessCampus project thumbnail",
     techs: ["React", "Java", "Postgres", "ESP32", "C"],
     link: "https://devpost.com/software/project-209",
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "SwiftApply | HenHacks 2025",
     description: "Your job application AI agent freeing you from the job application grind.",
-    image: "/vite-assets/SwiftApply.png",
+    image: assetPath("/vite-assets/SwiftApply.png"),
     alt: "SwiftApply project thumbnail",
     techs: ["React", "Browser", "Python", "TS", "Spring", "MySQL"],
     link: "https://devpost.com/software/swiftapply",
@@ -45,7 +45,7 @@ const projects = [
   {
     title: "Codecafé",
     description: "Google Docs for code. Collaborate on code in real-time within one click of a button.",
-    image: "/vite-assets/CodeCafe.png",
+    image: assetPath("/vite-assets/CodeCafe.png"),
     alt: "Codecafé project thumbnail",
     techs: ["React", "TS", "Spring", "Redis"],
     link: "https://github.com/mrktsm/codecafe",
@@ -53,7 +53,7 @@ const projects = [
   {
     title: "Kaleedo | Senior CS Capstone",
     description: "A contructivist digital humanities platform designed for leveraging AI and NLP.",
-    image: "/vite-assets/Kaleedo.png",
+    image: assetPath("/vite-assets/Kaleedo.png"),
     alt: "Kaleedo project thumbnail",
     techs: [".NET", "C#", "JS", "jQuery", "MySQL", "Bootstrap"],
     link: "https://kaleedo.net/",
@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Dermafyr | YCPHacks 2024 Winner 🏆",
     description: "Your unique skincare AI companion taylored to your skin type and concerns.",
-    image: "/vite-assets/Dermafyr.png",
+    image: assetPath("/vite-assets/Dermafyr.png"),
     alt: "Dermafyr project thumbnail",
     techs: ["React", "TF", "FastAPI", "Gemini", "Raspberry Pi"],
     link: "https://github.com/Andry-Arthur/dermafyr-ycp2024",
@@ -69,7 +69,7 @@ const projects = [
   {
     title: "Climately | HackHarvard 2024",
     description: "Chrome extension for smart, weather-aware scheduling for Google Calendar.",
-    image: "/vite-assets/climatelyLogoCopy.png",
+    image: assetPath("/vite-assets/climatelyLogoCopy.png"),
     alt: "Climately project thumbnail",
     techs: ["React", "GCal", "Spring", "OpenAI", "JS", "Weather"],
     link: "https://github.com/Andry-Arthur/Climately-HackHarvard2024",
@@ -77,7 +77,7 @@ const projects = [
   {
     title: "Smart Meal",
     description: "Your all-in-one recipe hub to search, rate, and manage meals tailored to your pantry and preferences!",
-    image: "/vite-assets/SmartMeal.png",
+    image: assetPath("/vite-assets/SmartMeal.png"),
     alt: "Smart Meal project thumbnail",
     techs: ["PHP", "JS", "MySQL"],
     link: "https://github.com/Andry-Arthur/Smart-Meal-Site",
@@ -85,7 +85,7 @@ const projects = [
   {
     title: "SubHunt | GFBG 4 Game Jam 2025",
     description: "Blind-accessible 3D submarine hunting game that turns spatial audio into your primary weapon.",
-    image: "/vite-assets/SubHunt.png",
+    image: assetPath("/vite-assets/SubHunt.png"),
     alt: "SubHunt project thumbnail",
     techs: ["Godot", "Audio", "Blind", "Game"],
     link: "https://github.com/Andry-Arthur/SubHunt",
@@ -93,7 +93,7 @@ const projects = [
   {
     title: "Graph Theory : Book and Web Graph",
     description: "Turning Pages, Spinning Webs: Unfolding the Book and Web of Graphs.",
-    image: "/vite-assets/GraphTheory.png",
+    image: assetPath("/vite-assets/GraphTheory.png"),
     alt: "Graph Theory project thumbnail",
     techs: ["Overleaf", "Math"],
     link: assetPath("/vite-assets/Graph_Theory_Paper.pdf"),
@@ -101,7 +101,7 @@ const projects = [
   {
     title: "Anki Cozmo Montecarlo Localization",
     description: "Solving Cozmo's kidnapping problem with Monte Carlo Localization.",
-    image: "/vite-assets/AnkiLogo.png",
+    image: assetPath("/vite-assets/AnkiLogo.png"),
     alt: "Anki Cozmo project thumbnail",
     techs: ["Python", "NumPy", "Pandas", "OpenCV"],
     link: "http://cs.gettysburg.edu/~tneller/archive/cs371/cozmo/22sp/rakotonjanabelo/ankimontecarlo.wordpress.com/index.html",
@@ -109,7 +109,7 @@ const projects = [
   {
     title: "Optimus Time | HackHarvard 2023",
     description: "Health data-driven smart scheduling boosting productivity while preventing burnout.",
-    image: "/vite-assets/OptimusTime.jpg",
+    image: assetPath("/vite-assets/OptimusTime.jpg"),
     alt: "Optimus Time project thumbnail",
     techs: ["Java", "Postgres", "Terra"],
     link: "https://devpost.com/software/optimustime",
@@ -117,7 +117,7 @@ const projects = [
   {
     title: "CS with Andry | Youtube Channel",
     description: "My coding journey, uncensored. YouTube videos of problem-solving, projects, and everything in between.",
-    image: "/vite-assets/Youtube.png",
+    image: assetPath("/vite-assets/Youtube.png"),
     alt: "CS with Andry project thumbnail",
     techs: ["Java", "Python", "Video"],
     link: "https://www.youtube.com/@cswithandry",
@@ -125,7 +125,7 @@ const projects = [
   {
     title: "Project Title: short desc",
     description: "Coming Soon... Coding magic in progress!",
-    image: "/vite-assets/Placeholder.png",
+    image: assetPath("/vite-assets/Placeholder.png"),
     alt: "Placeholder project thumbnail",
     techs: [],
     link: "#",

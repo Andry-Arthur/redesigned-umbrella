@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { assetPath } from "../lib/asset-path";
-
 export default function HeroCarousel({ images }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(false);
@@ -28,7 +26,7 @@ export default function HeroCarousel({ images }) {
       <div className={`circular-carousel ${fade ? "fade-out" : "fade-in"}`}>
         <div className="carousel-image-container">
           <Image
-            src={assetPath(images[currentImageIndex].src)}
+            src={images[currentImageIndex].src}
             alt={images[currentImageIndex].alt}
             fill
             priority
